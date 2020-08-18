@@ -1,11 +1,11 @@
 class Filme{
-  constructor() {
-    this.titulo = "";
-    this.ano = "";
-    this.genero = "";
-    this.diretor = "";
-    this.atores = [];
-    this.duracao = "";
+  constructor(t,a,g,d,o,u) {
+    this.titulo = t;
+    this.ano = a;
+    this.genero = g;
+    this.diretor = d;
+    this.atores = o;
+    this.duracao = u;
   };
 
   Reproduzir() { 
@@ -25,3 +25,7 @@ class Filme{
   };
 
 };
+
+let vingadores = new Filme('Vingadores', 2000, 'Ação', 'Max Walt', ['Fulano', 'Fulana', 'Cilclaninho'], '2h:30min');
+
+console.log(vingadores)
