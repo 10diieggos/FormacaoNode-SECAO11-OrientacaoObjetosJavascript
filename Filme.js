@@ -9,7 +9,7 @@ class Filme{
   };
 
   Reproduzir() { 
-    console.log('reproduzindo...');
+    console.log('Reproduzindo ->');
   };
 
   Pausar() { 
@@ -24,8 +24,24 @@ class Filme{
     console.log('fechar X');
   };
 
+  Ficha() { 
+    console.log(`
+      Título: ${this.titulo}
+      Ano: ${this.ano}
+      Gênero: ${this.genero}
+      Diretor: ${this.diretor}
+      Atores: ${this.atores}
+      Duracao: ${this.duracao}
+    `);
+    this.Reproduzir()
+  };
+
 };
 
-let vingadores = new Filme('Vingadores', 2000, 'Ação', 'Max Walt', ['Fulano', 'Fulana', 'Cilclaninho'], '2h:30min');
+let filme1 = new Filme('Vingadores', 2000, 'Ação', 'Max Walt', ['Fulano', 'Fulana', 'Cilclaninho'], '2h:30min');
 
-console.log(vingadores)
+filme1.Ficha()
+
+let filme2 = new Filme('Batman', 2005, 'Ação', 'Walter Max', ['Beltrano', 'Ciclana', 'Fulano'], '2h:30min');
+
+filme2.Ficha()
