@@ -1,4 +1,4 @@
-//Aula 170 - Desafio do dado
+//Aula 171 - Reslvendo desafio do dado
 
 //Sistema de Cassino
 //Vários tipos de Dados
@@ -9,15 +9,19 @@
 class Dado {
 
   constructor(faces) {
-    this.faces = faces
+    this.faces = faces;
   };
 
   Rolar() { 
-    let aleatory = Math.random();
-    aleatory = aleatory * this.faces;
-    aleatory = Math.ceil(aleatory);
-    console.log(aleatory);
+    console.log(this.GetRandomIntInclusive(1, this.faces));
   };
+
+  GetRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
 };
 
 let dado = new Dado(6);
