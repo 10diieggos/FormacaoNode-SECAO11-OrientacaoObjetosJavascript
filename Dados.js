@@ -4,7 +4,7 @@
 //Vários tipos de Dados
 //Rolar Dados
 
-//Esta é a minha versão da solução. A do professor Victor Lima vem no próximo commit
+//Esta é a minha versão REFATORADA da solução. A do professor Victor Lima vem no próximo commit
 
 class Dado {
 
@@ -15,12 +15,12 @@ class Dado {
   Rolar() { 
     let aleatory = Math.random();
     aleatory = aleatory * this.faces;
-    aleatory = Math.floor(aleatory) + 1;
+    aleatory = Math.ceil(aleatory);
     console.log(aleatory);
   };
 };
 
-let dado = new Dado(20);
+let dado = new Dado(6);
 
 dado.Rolar();
 dado.Rolar();
